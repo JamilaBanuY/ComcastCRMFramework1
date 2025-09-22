@@ -1,0 +1,1 @@
+package aAssert.soft.hard;
