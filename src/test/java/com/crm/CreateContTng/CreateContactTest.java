@@ -16,7 +16,9 @@ import com.crm.GenericBaseUtility.BaseClass;
 public class CreateContactTest extends BaseClass {
 
 	@Test(groups = "smoke Test")
-	public void CreatecontactLn() throws IOException, Throwable { // read TestScript data from Excel File
+	public void CreatecontactLn() throws IOException, Throwable { 
+		
+		// read TestScript data from Excel File
 		System.out.println("execute Create Contact");
 		String lastName = elib.getDataFromExcel("contact", 1, 2) + jlib.getRandomNumber();
 

@@ -10,7 +10,7 @@ public class InvoiceTest3retryanalyzer extends BaseClass {
 	public void createInvoiceTest() {
 		System.out.println("execute createInvoiceTest");
 		String ActTitle = driver.getTitle();
-		Assert.assertEquals("ActTitle", "Login");// intentionally failing Test Case
+	//Assert.assertEquals("ActTitle", "Login Page");// intentionally failing Test Case
 		System.out.println("Step1");
 		System.out.println("Step2");
 		System.out.println("Step3");

@@ -1,19 +1,12 @@
 package com.comcast.crm.ListenerUtility;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Date;
-
-import org.apache.commons.io.FileUtils;
-import org.jsoup.Connection.Base;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -73,19 +66,6 @@ public class LisImpclass implements ITestListener, ISuiteListener {
 		 String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		 test.addScreenCaptureFromBase64String(filePath, testName+"-"+time);
 		 test.log(Status.FAIL, result.getMethod().getMethodName()+"FAILED");
-	}
-
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestSkipped(result);
-		
-	}
-
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 }

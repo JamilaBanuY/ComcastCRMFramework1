@@ -18,8 +18,7 @@ public class InvoiceTestbyxml extends BaseClass {
 	//String ActTitle = driver.getTitle();
 	//Assert.assertEquals("ActTitle", "Login");//intentionally failing Test Case
 //Run in suite will get old Screenshot (backup) and new Screenshot with timeStamp; 
-
-	}
+}
 
 	@Test
 	public void createInvoicewithContactTest()
@@ -30,7 +29,4 @@ public class InvoiceTestbyxml extends BaseClass {
 	System.out.println("Step4");
 
 	}
-
-
-	
 }

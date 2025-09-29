@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Practice.TESTNG.Flixbus">
+      <class name="com.crm.CreateOrgTng.CreateOrgTest">
         <methods>
-          <include name="bookticket"/>
+          <include name="BC"/>
+          <include name="BS"/>
+          <include name="AC"/>
+          <include name="AS"/>
+          <include name="createContact"/>
+          <include name="AM"/>
+          <include name="BM"/>
         </methods>
-      </class> <!-- Practice.TESTNG.Flixbus -->
+      </class> <!-- com.crm.CreateOrgTng.CreateOrgTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

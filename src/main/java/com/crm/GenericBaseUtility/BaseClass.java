@@ -51,7 +51,8 @@ public class BaseClass {
 	@BeforeClass(groups = { "regressionTest", "smoke Test" })
 	public void BC() throws Throwable {
 		System.out.println("Launch Browser");
-		String BROWSER = flib.getDataFromPropertiesFile("browser");
+	//	String BROWSER = flib.getDataFromPropertiesFile("browser");
+	String BROWSER =System.getProperty("browser", flib.getDataFromPropertiesFile("browser"));
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equals("firefox")) {
@@ -66,9 +67,12 @@ UtilityClassObject.setDriver(driver);
 	@BeforeMethod(groups = { "regressionTest", "smoke Test" })
 	public void BM() throws Throwable {
 		System.out.println("Login to app");
-		String URL = flib.getDataFromPropertiesFile("url");
-		String USERNAME = flib.getDataFromPropertiesFile("username");
-		String PASSWORD = flib.getDataFromPropertiesFile("password");
+		//String URL = flib.getDataFromPropertiesFile("url");
+		//String USERNAME = flib.getDataFromPropertiesFile("username");
+		//String PASSWORD = flib.getDataFromPropertiesFile("password");
+		String URL =System.getProperty("url", flib.getDataFromPropertiesFile("url"));
+		String USERNAME = System.getProperty("username", flib.getDataFromPropertiesFile("username"));
+		String PASSWORD = System.getProperty("password", flib.getDataFromPropertiesFile("password"));
 		LoginPage lp = new LoginPage(driver);
 		lp.logintoApp(URL, USERNAME, PASSWORD);
 
